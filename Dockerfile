@@ -2,16 +2,12 @@
 FROM eclipse-temurin:17-jdk-jammy AS build
 WORKDIR /app
 
-# 一番上の階層にあるファイルをそのままコピー
-COPY gradlew ./gradlew
-COPY gradle ./gradle
-COPY build.gradle ./build.gradle
-COPY settings.gradle ./settings.gradle
-COPY src ./src
+# ファイルをすべてコピー
+COPY . .
 
-# 権限を付与してアプリケーションをビルド
+# gradlewに実行権限を確実に付与してビルドを実行
 RUN chmod +x gradlew
-RUN ./gradlew bootJar -x test
+RUN ./gradlew bootJar -x test --no-daemon
 
 # 実行用イメージ
 FROM eclipse-temurin:17-jre-jammy
