@@ -5,9 +5,9 @@ WORKDIR /app
 # ファイルをすべてコピー
 COPY . .
 
-# gradlewに実行権限を確実に付与してビルドを実行
+# gradlewに実行権限を確実に付与し、詳細なエラーを出力する(--info)オプションをつけてビルド
 RUN chmod +x gradlew
-RUN ./gradlew bootJar -x test --no-daemon
+RUN ./gradlew bootJar -x test --no-daemon --info
 
 # 実行用イメージ
 FROM eclipse-temurin:17-jre-jammy
