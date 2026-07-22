@@ -1,0 +1,45 @@
+.task-new-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.content-box {
+  border: 2px solid black;
+  padding: 20px;
+  width: 500px;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+}
+
+.char-count {
+  text-align: right;
+  color: blue;
+  font-size: 0.9em;
+}
+
+.save-button {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.back-link {
+  text-align: right;
+  text-decoration: underline;
+  color: blue;
+}

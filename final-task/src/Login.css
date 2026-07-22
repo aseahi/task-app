@@ -1,0 +1,50 @@
+/* ページ全体を中央揃えに */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* タイトルのスタイル */
+.main-title {
+  color: blue;
+  margin-bottom: 30px;
+}
+
+/* ログインボックスの枠線 */
+.login-box {
+  border: 2px solid blue;
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+}
+
+/* 各入力欄の配置 */
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group input {
+  width: 100%;
+}
+
+/* ログインボタン */
+.login-button {
+  width: 100%;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* タスク一覧へのリンク */
+.task-link {
+  margin-top: 20px;
+  color: blue;
+  text-decoration: underline;
+}
