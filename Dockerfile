@@ -2,14 +2,12 @@
 FROM eclipse-temurin:17-jdk-jammy AS build
 WORKDIR /app
 
-# 必要なファイルをまとめてコピー（パスを確実に合わせる）
-COPY task-backend/gradlew ./gradlew
-COPY task-backend/gradle ./gradle
-COPY task-backend/build.gradle ./build.gradle
-COPY task-backend/settings.gradle ./settings.gradle
-
-# ソースコードをコピー
-COPY task-backend/src ./src
+# 一番上の階層にあるファイルをそのままコピー
+COPY gradlew ./gradlew
+COPY gradle ./gradle
+COPY build.gradle ./build.gradle
+COPY settings.gradle ./settings.gradle
+COPY src ./src
 
 # 権限を付与してアプリケーションをビルド
 RUN chmod +x gradlew
